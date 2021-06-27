@@ -1,0 +1,187 @@
+@import '../styles';
+
+.navbar {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+
+    &-brand {
+        width: 100%;
+        display: flex;
+
+        &-logo,
+        &-burger {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &-logo {
+            flex: 1;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-burger {
+            flex: 1;
+            &-split {
+                display: block;
+                height: 100%;
+                padding: 5px 8px;
+                margin-left: auto;
+                text-align: center;
+                i {
+                    font-size: 1.2em;
+                    vertical-align: middle;
+                    user-select: none;
+                }
+                ul {
+                    display: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &-menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: $white;
+        z-index: 100;
+        &-bg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-blue;
+            opacity: .85;
+        }
+        &-inner {
+            position:absolute;
+            top: 5%;
+            left: 10%;
+            right: 10%;
+            bottom: 5%;
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.4em;
+                &-close {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-body {
+                padding: 2rem 0;
+                text-align: center;
+                >* {
+                    display: block;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $white;
+                    padding: 2rem 0;
+                    font-size: 1.2em;
+                    border-top: 1px solid $gray;
+                    width: 100%;
+                }
+                >a {
+                    transition: 100ms ease;
+                    &:hover {
+                        color: $soft-red;
+                    }
+                }
+            }
+            &-footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                >i {
+                    font-size: 1.8em;
+                    padding: 1.5rem;
+                    transition: 100ms ease;
+                    &:hover {
+                        color: $soft-red;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        height: 8rem;
+        &-brand {
+            &-logo {
+                flex: 1;
+            }
+            &-burger {
+                flex: 2;
+                &-split {
+                    i {
+                        display: none;
+                    }
+                    ul {
+                        width: 100%;
+                        display: block;
+                        list-style: none;
+                        li {
+                            display: inline-block;
+                            margin-left: 10px;
+                            font-size: .8em;
+                            >a {
+                                text-decoration: none;
+                                color: inherit;
+                                text-transform: uppercase;
+                                transition: 100ms ease;
+                                &:hover {
+                                    color: $soft-red;
+                                }
+                            }
+                            .button {
+                                a {
+                                    text-transform: uppercase;
+                                    padding-left: 1rem;
+                                    padding-right: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        &-brand {
+            &-burger {
+                &-split {
+                    ul {
+                        li {
+                            margin-left: 25px;
+                            font-size: .85em;
+
+                            .button {
+                                a {
+                                    text-transform: uppercase;
+                                    padding-left: 2.5rem;
+                                    padding-right: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

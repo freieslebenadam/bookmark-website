@@ -1,0 +1,83 @@
+@import '../styles';
+
+#contact {
+    background-color: $soft-blue;
+    color: $white;
+    .contact {
+        padding: 3.5rem 0;
+        text-align: center;
+
+        &-info {
+            p {
+                text-transform: uppercase;
+                letter-spacing: .2em;
+                font-weight: 400;
+                font-size: .8em;
+            }
+            h1 {
+                font-weight: 500;
+                font-size: 1.3em;
+                padding: 2rem 0;
+            }
+        }
+        &-form {
+            display: flex;
+            flex-direction: column;
+            .valid {
+                $valid-color: rgb(108, 206, 108);
+                border: 2px solid $valid-color;
+            }
+            .not-valid {
+                border: 2px solid $soft-red;
+            }
+            input {
+                margin: 1rem 0;
+                display: block;
+                width: 100%;
+                border: none;
+                border-radius: 5px;
+                padding: 1rem;
+                font-family: $rubik;
+                color: $dark-blue;
+
+                &::placeholder {
+                    color: $gray;
+                }
+                &:focus {
+                    outline: none;
+                }
+
+            }
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #contact {
+        .contact {
+            max-width: 520px;
+            margin: 0 auto;
+            &-info {
+                p {
+                    padding: 1rem 0;
+                }
+                h1 {
+                    font-size: 1.6em;
+                }
+            }
+            &-form {
+                flex-direction: row;
+                align-items: center;
+                input {
+                    margin-right: 20px;
+                }
+                .button {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

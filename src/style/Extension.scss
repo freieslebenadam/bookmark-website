@@ -1,0 +1,82 @@
+@import '../styles';
+
+.extension {
+    padding-top: 0;
+    &-info {
+        text-align: center;
+        h1 {
+            font-size: 1.6em;
+            font-weight: 500;
+            padding: 1rem 0;
+        }
+        p {
+            font-size: .9em;
+            color: $gray;
+            line-height: 1.6em;
+            margin-bottom: 2.5rem;
+        }
+    }
+    &-browsers {
+        .browser {
+            text-align: center;
+            box-shadow: 1px 2px 8px $gray;
+            border-radius: 15px;
+            margin-bottom: 3.5rem;
+
+            &-info {
+                padding: 3rem 0;
+                img {
+                    padding: 1.2rem 0;
+                }
+                h2 {
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    padding: .8rem 0;
+                }
+                p {
+                    font-size: .9em;
+                    color: $gray;
+                }
+            }
+            &-install {
+                border-top: 4px dotted $light-gray;
+                padding: 1.5rem;
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .extension {
+        padding-top: 5rem;
+        &-info {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        &-browsers {
+            display: flex;
+            justify-content: center;
+            .browser {
+                margin: 1rem;
+                min-width: 220px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .extension {
+        &-browsers {
+            .browser {
+                min-width: 300px;
+                transition: 100ms ease;
+                &:hover {
+                    transform: scale(1.025);
+                }
+            }
+        }
+    }
+}

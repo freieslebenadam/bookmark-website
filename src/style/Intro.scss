@@ -1,0 +1,78 @@
+@import '../styles';
+
+#intro {
+    background-image: url(../images/bg-bubble-right.svg);
+    background-repeat: no-repeat;
+    background-position: right 30%;
+    background-size: 75%;
+}
+
+.intro {
+    &-pic {
+        display: block;
+        padding: 2rem 0;
+        img {
+            max-width: 100%;
+        }
+    }
+    &-info {
+        text-align: center;
+        h1 {
+            font-weight: 500;
+            font-size: 1.7em;
+        }
+        p {
+            color: $gray;
+            font-size: .85em;
+            line-height: 1.6em;
+            padding: 1.8rem 0;
+        }
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            >.button {
+                width: 49%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    #intro {
+        background-position: right 25%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #intro {
+        background-position: 100% 90%;
+        background-size: 35%;
+    }
+    .intro {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        &-pic {
+            flex: 7;
+            text-align: right;
+            img {
+                max-width: 80%;
+            }
+        }
+        &-info {
+            flex: 8;
+            max-width: 45%;
+            text-align: left;
+            h1{
+                font-size: 2em;
+            }
+            &-buttons {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    }
+}

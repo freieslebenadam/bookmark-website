@@ -1,0 +1,177 @@
+@import '../styles';
+
+#features {
+    padding-top: 0;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 18%;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-image: url(../images/bg-bubble-left.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 85%;
+        z-index: -1;
+    }
+}
+.features {
+    text-align: center;
+    &-info {
+        h1 {
+            font-size: 1.6em;
+            font-weight: 500;
+            padding: .5rem 0;
+        }
+        p {
+            color: $gray;
+            font-size: .84em;
+            line-height: 1.6em;
+            padding: .5rem 0;
+        }
+    }
+    &-list {
+        padding-top: 2rem;
+        &-menu {
+            border-bottom: 1px solid $gray;
+            list-style: none;
+            li {
+                border-top: 1px solid $gray;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    color: $gray;
+                    padding: 1rem 0;
+                    transition: 100ms ease;
+                    position: relative;
+
+                    &:hover {
+                        color: $soft-red;
+                        cursor: pointer;
+                    }
+
+                    &.active {
+                        color: $dark-blue;
+                        &:hover {
+                            color: $soft-red;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 25%;
+                            right: 25%;
+                            top: 0;
+                            bottom: 0;
+                            border-bottom: 4px solid $soft-red;
+                        }
+                    }
+                }
+            }
+        }
+        &-content {
+            .feature {
+                margin-top: 4rem;
+                &-pic {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &-text {
+                    h2 {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        padding: 3rem 0 .8rem 0;
+                    }
+                    p {
+                        color: $gray;
+                        font-size: .8em;
+                        line-height: 1.6em;
+                    }
+                    .button {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    #features {
+        &::before {
+            bottom: 15%;
+            background-size: 85%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #features {
+        padding-top: 5rem;
+        &::before {
+            bottom: 0%;
+            background-size: 45%;
+        }
+    }
+    .features {
+        &-info {
+            margin: 0 auto;
+            max-width: 50%;
+        }
+        &-list {
+            width: 70%;
+            margin: 0 auto;
+            &-menu {
+                display: flex;
+                justify-content: space-evenly;
+                li {
+                    border-top: 0;
+                    a {
+                        &.active {
+                            &::after {
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &-content {
+                .feature {
+                    display: flex;
+                    flex-direction: row;
+                    &-pic {
+                        display: flex;
+                        align-items: center;
+                        flex: 1;
+                    }
+                    &-text {
+                        align-items: center;
+                        flex: 1;
+                        text-align: left;
+                        padding-left: 3rem;
+                        .button {
+                            display: inline-block;
+                            margin: 1rem 0;
+                            a {
+                                padding-left: 1.5rem;
+                                padding-right: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #features {
+        &::before {
+            bottom: -18%;
+            background-size: 38%;
+        }
+    }
+}

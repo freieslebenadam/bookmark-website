@@ -1,0 +1,82 @@
+@import '../styles';
+
+.button {
+    display: inline-block;
+
+    a {
+        user-select: none;
+        display: block;
+        text-decoration: none;
+        padding: .9rem .6rem;
+        font-size: .8em;
+        letter-spacing: .03rem;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: 100ms ease;
+    }
+}
+
+.primary {
+    a {
+        background-color: $soft-blue;
+        color: $white;
+        border: 2px solid $soft-blue;
+        &:hover {
+            background-color: $white;
+            color: $soft-blue;
+            box-shadow: 0px 3px 5px $gray;
+        }
+    }
+}
+
+.red {
+    a {
+        background-color: $soft-red;
+        color: $white;
+        border: 2px solid $soft-red;
+        &:hover {
+            background-color: $white;
+            color: $soft-red;
+            box-shadow: 0px 3px 5px $gray;
+        }
+    }
+}
+
+.secondary {
+    a {
+        background-color: $light-gray;
+        color: $dark-gray;
+        box-shadow: 0px 3px 5px $gray;
+        border: 2px solid $light-gray;
+        &:hover {
+            background-color: $white;
+            border: 2px solid $dark-gray;
+        }
+    }
+}
+
+.shallow {
+    a {
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+        &:hover {
+            background-color: $white;
+            color: $soft-red;
+            box-shadow: 0px 3px 5px $gray;
+        }
+    }
+}
+
+.white {
+    a {
+        background-color: $white;
+        color: $soft-blue;
+        border: 2px solid $white;
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $white;
+            color: $white;
+        }
+    }
+}

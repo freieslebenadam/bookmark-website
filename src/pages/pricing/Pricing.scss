@@ -1,0 +1,83 @@
+@import '../../styles';
+
+.pricing {
+    text-align: center;
+    &-header {
+        h1 {
+            font-size: 2em;
+            font-weight: 500;
+            padding: 4rem 0 2rem 0;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+
+                &:checked + .slider {
+                    background-color: $soft-blue;
+                }
+                &:focus + .slider {
+                    box-shadow: 0 0 1px $soft-blue;
+                }
+                &:checked + .slider::before {
+                    transform: translateX(26px)
+                }
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $soft-blue;
+                transition: 400ms;
+                border-radius: 34px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: $white;
+                    transition: 400ms ease;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .time-interval {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >p {
+                padding: 0 1rem;
+                color: $gray;
+            }
+        }
+    }
+    &-plans {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pricing {
+        &-plans {
+            margin-top: 6rem;
+            flex-direction: row;
+        }
+    }
+}

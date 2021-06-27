@@ -1,0 +1,73 @@
+@import '../styles';
+
+#footer {
+    background-color: $dark-blue;
+    color: $white;
+
+    .footer {
+        padding: 3rem 0 2rem 0;
+        text-align: center;
+        &-links,
+        &-social {
+            ul {
+                list-style: none;
+                li {
+                    a {
+                        transition: 100ms ease;
+                        &:hover {
+                            cursor: pointer;
+                            color: $soft-red;
+                        }
+                    }
+                }
+            }
+        }
+        &-links {
+            padding: 1.5rem 0 1rem 0;
+            ul {
+                li {
+                    padding: 1rem 0;
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: .8em;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+        &-social {
+            ul {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                li {
+                    padding: 1rem;
+                    a {
+                        i {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #footer {
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            &-links {
+                ul {
+                    li {
+                        display: inline-block;
+                        padding: 0 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
