@@ -25,16 +25,16 @@ function Navbar() {
                                 <i onClick={toggleNav} className={`fas ${burgerClass}`}></i>
                                 <ul>
                                     <li>
-                                        <a href="#features">Features</a>
+                                        <a href="/#features">Features</a>
                                     </li>
                                     <li>
                                         <Link to="/pricing">Pricing</Link>
                                     </li>
                                     <li>
-                                        <a href="#contact">Contact</a>
+                                        <a href="/#contact">Contact</a>
                                     </li>
                                     <li>
-                                        <Button type="red">Login</Button>
+                                        <Button type="red" link="#">Login</Button>
                                     </li>
                                 </ul>
                             </div>
