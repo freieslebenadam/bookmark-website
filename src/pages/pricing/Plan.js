@@ -11,7 +11,7 @@ function Plan({name, price, storage, users, transfer, type}) {
             <p>{users} Users Allowed</p>
             <p>Send up to {transfer}</p>
             <div className="button-wrapper">
-                <Button type={type==="special"?"white":"primary"}>LEARN MORE</Button>
+                <Button type={type==="special"?"white":"primary"} link="#">LEARN MORE</Button>
             </div>
         </div>
     )
